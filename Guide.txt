@@ -1,0 +1,96 @@
+Pages & Sections for an E-Commerce Apparel Website
+1. Home Page (Landing Page)
+Hero Section – Large banner with high-quality images, tagline, and CTA (e.g., "Shop Now")
+
+Featured Collections – Highlight trending categories (Men, Women, New Arrivals, etc.)
+
+Best Sellers / Trending Items – Showcase popular products
+
+Limited-Time Offers – Display promotions and discounts
+
+Testimonials / Reviews – Social proof from customers
+
+Newsletter Signup – Email subscription form for promotions
+
+2. Shop Page (Product Listing Page)
+Category Filter – Men, Women, Accessories, etc.
+
+Sorting Options – Price, Popularity, Newest, Best Rated
+
+Grid of Products – Each product has an image, title, price, and quick add-to-cart button
+
+Pagination / Infinite Scroll – Load more products
+
+3. Product Details Page
+High-Resolution Images (Gallery/Zoom-in feature)
+
+Product Name & Price
+
+Size & Color Options (Selectable Variants)
+
+Stock Availability
+
+Add to Cart & Buy Now Buttons
+
+Customer Reviews & Ratings
+
+Related Products / You May Also Like
+
+4. Cart Page
+List of Added Items (Image, Name, Quantity, Price, Remove Button)
+
+Apply Discount Code
+
+Subtotal, Taxes, and Total Price
+
+Checkout Button
+
+5. Checkout Page
+Billing & Shipping Information Form
+
+Payment Options (Credit Card, PayPal, GCash, COD, etc.)
+
+Order Summary
+
+Place Order Button
+
+6. Order Confirmation Page
+Thank You Message
+
+Order Number & Details
+
+Estimated Delivery Date
+
+Track Order Button
+
+7. User Account Dashboard
+Profile Settings (Name, Email, Password)
+
+Order History (View & Track Orders)
+
+Wishlist / Saved Items
+
+Address Book (Manage Shipping Addresses)
+
+8. Contact Us Page
+Contact Form (Name, Email, Message)
+
+Customer Support Details (Phone, Email, Social Media)
+
+Live Chat Option (if available)
+
+9. About Us Page
+Brand Story & Mission
+
+Team & Vision
+
+Sustainability / Ethical Practices (If applicable)
+
+10. Footer (Global Section)
+Quick Links (Shop, Contact, FAQ, etc.)
+
+Social Media Icons
+
+Newsletter Subscription
+
+Payment Methods & Security Badges

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="Pdetails.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        // Function to decode and get URL parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return decodeURIComponent(urlParams.get(param) || '');
+        }
+
+        // Display product details
+        function displayProductDetails() {
+            const productName = getQueryParam('name');
+            const productPrice = getQueryParam('price');
+            const productImage = getQueryParam('image');
+
+            if (productName && productPrice && productImage) {
+                document.getElementById('product-name').textContent = productName;
+                document.getElementById('product-price').textContent = `₱${productPrice}`;
+                document.getElementById('product-image').src = productImage;
+                document.getElementById('product-image').alt = productName;
+            } else {
+                document.getElementById('product-details').innerHTML = '<p>Product not found.</p>';
+            }
+        }
+
+        // Add product to cart and redirect to cart page
+        function addToCart() {
+            const productName = document.getElementById('product-name').textContent;
+            const productPrice = document.getElementById('product-price').textContent.replace('₱', '');
+            const productImage = document.getElementById('product-image').src;
+            const size = document.getElementById('size').value;
+            const color = document.getElementById('color').value;
+
+            if (!productName || !productPrice || !productImage) {
+                alert("Error: Product details are missing.");
+                return;
+            }
+
+            // Get existing cart items or create an empty array
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Add new item to cart
+            cart.push({
+                name: productName,
+                price: parseFloat(productPrice),
+                image: productImage,
+                size: size,
+                color: color,
+                quantity: 1
+            });
+
+            // Save updated cart to localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Redirect to cart page
+            window.location.href = "cart.html";
+        }
+    </script>
+</head>
+<body onload="displayProductDetails()">
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/noxlogo.png" alt="Nox Apparel Logo" class="logo-img">
+            Nox Apparel
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#" class="active">Collections</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="btn"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="product-details" class="product-details">
+        <div class="product-image">
+            <img id="product-image" src="" alt="Product Image">
+        </div>
+        <div class="product-info">
+            <h1 id="product-name"></h1>
+            <p id="product-price"></p>
+
+            <div class="options">
+                <div class="size">
+                    <label for="size">Size:</label>
+                    <select id="size" name="size">
+                        <option value="S">Small</option>
+                        <option value="M">Medium</option>
+                        <option value="L">Large</option>
+                        <option value="XL">X-Large</option>
+                    </select>
+                </div>
+                <div class="color">
+                    <label for="color">Color:</label>
+                    <select id="color" name="color">
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                    </select>
+                </div>
+            </div>
+
+            <p class="stock">In Stock: <span>30 items</span></p>
+
+            <div class="action-buttons">
+                <button class="btn add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <button class="btn buy-now">Buy Now</button>
+            </div>
+
+            <a href="collection.html" class="btn">Back to Collections</a>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="customer-reviews">
+        <h3>Customer Reviews</h3>
+        <div class="review">
+            <span class="rating">★★★★★</span>
+            <p class="review-text">Great quality shirt! Fits perfectly.</p>
+        </div>
+        <div class="review">
+            <span class="rating">★★★★☆</span>
+            <p class="review-text">Good material but a little tight in size M.</p>
+        </div>
+        <div class="review">
+            <span class="rating">★★★★★</span>
+            <p class="review-text">Amazing color and fabric. Highly recommend!</p>
+        </div>
+        <a href="#">Write a Review</a>
+    </section>
+
+    <!-- Related Products Section -->
+    <section class="related-products">
+        <h2>You May Also Like</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="img/1.png" alt="Product 1">
+                <h3>Denim Pants</h3>
+                <p>₱1,299</p>
+                <a href="product-details.html?name=Denim%20Pants&price=1299&image=" + encodeURIComponent("img/1.png") class="btn">View Details</a>
+            </div>
+            <div class="product-item">
+                <img src="img/24.png" alt="Product 2">
+                <h3>Casual Shorts</h3>
+                <p>₱899</p>
+                <a href="product-details.html?name=Casual%20Shorts&price=899&image=" + encodeURIComponent('img/24.png') class="btn">View Details</a>
+            </div>
+            <div class="product-item">
+                <img src="img/25.png" alt="Product 3">
+                <h3>Formal Polo</h3>
+                <p>₱1,599</p>
+                <a href="product-details.html?name=Formal%20Polo&price=1599&image=" + encodeURIComponent('img/25.png') class="btn">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Nox Apparel. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

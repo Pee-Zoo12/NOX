@@ -1,2 +1,0 @@
-# NOX
-Clothing Website 

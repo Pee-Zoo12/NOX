@@ -21,8 +21,8 @@ $image = isset($_GET['image']) ? htmlspecialchars($_GET['image']) : "img/default
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="collection.php" class="active">Collections</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html" class="btn"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="cart.php" class="btn"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a></li>
             </ul>
         </nav>
     </header>
@@ -34,29 +34,32 @@ $image = isset($_GET['image']) ? htmlspecialchars($_GET['image']) : "img/default
             </div>
             <div class="product-info">
                 <h1><?php echo $name; ?></h1>
-                <p class="price">₱<?php echo $price; ?></p>
+                <p class="price">₱<?php echo number_format($price, 2); ?></p>
 
-                <label for="color">Color:</label>
-                <select id="color">
-                    <option>Black</option>
-                    <option>White</option>
-                    <option>Brown</option>
-                </select>
+                <form id="add-to-cart-form">
+                    <label for="color">Color:</label>
+                    <select id="color" name="color" required>
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Brown">Brown</option>
+                    </select>
 
-                <label for="size">Size:</label>
-                <select id="size">
-                    <option>XS</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
+                    <label for="size">Size:</label>
+                    <select id="size" name="size" required>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
 
-                <button onclick="addToCart()" class="btn">Add to Cart</button>
-                <button class="btn">Buy Now</button>
+                    <button type="button" onclick="addToCart()" class="btn">Add to Cart</button>
+                    <button type="button" onclick="buyNow()" class="btn buy-now-btn">Buy Now</button>
+                </form>
             </div>
         </section>
 
+        <!-- Related Products -->
         <section class="related-products">
             <h2>Related Products</h2>
             <div class="product-list">
@@ -64,7 +67,8 @@ $image = isset($_GET['image']) ? htmlspecialchars($_GET['image']) : "img/default
                 $related = [
                     ["Denim Pants", 1299, "img/1.png"],
                     ["Casual Shorts", 899, "img/24.png"],
-                    ["Formal Polo", 1599, "img/25.png"]
+                    ["Formal Polo", 1599, "img/25.png"],
+                    ["Stylish Jacket", 799, "img/30.png"]
                 ];
 
                 foreach ($related as $prod) {
@@ -75,7 +79,7 @@ $image = isset($_GET['image']) ? htmlspecialchars($_GET['image']) : "img/default
                     <div class='product-item'>
                         <img src='{$rImage}' alt='{$rName}'>
                         <h3>{$rName}</h3>
-                        <p>₱{$rPrice}</p>
+                        <p>₱" . number_format($rPrice, 2) . "</p>
                         <a href='product-details.php?name=" . urlencode($rName) . "&price={$rPrice}&image=" . urlencode($rImage) . "' class='btn'>View Details</a>
                     </div>
                     ";
@@ -118,6 +122,11 @@ $image = isset($_GET['image']) ? htmlspecialchars($_GET['image']) : "img/default
 
             alert("Added to cart!");
             updateCartCount();
+        }
+
+        function buyNow() {
+            addToCart();
+            window.location.href = "checkout.php"; // redirect to checkout after adding
         }
 
         function updateCartCount() {

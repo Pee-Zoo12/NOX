@@ -38,7 +38,7 @@ $collections = [
         ['id' => 'shoes-stylish-sandals', 'name' => 'Stylish Sandals', 'price' => 1299, 'image' => 'img/21.png', 'category' => 'shoes'],
         ['id' => 'shoes-elegant-heels', 'name' => 'Elegant Heels', 'price' => 2999, 'image' => 'img/22.png', 'category' => 'shoes'],
         ['id' => 'shoes-classic-mary-janes', 'name' => 'Classic Mary Janes', 'price' => 1899, 'image' => 'img/23.png', 'category' => 'shoes'],
-        ['id' => 'shoes-casual-flats', 'name' => 'Casual Flats', 'price' => 1199, 'image' => 'img/24.png', 'category' => 'shoes'],
+        ['id' => 'shoes-casual-flats', 'name' => 'Casual Flats', 'price' => 1199, 'image' => 'img/27.png', 'category' => 'shoes'],
     ]
 ];
 

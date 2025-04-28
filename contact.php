@@ -18,6 +18,7 @@ if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 
+// Handle feedback submission
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["order_number"])) {
     // Verify CSRF token
     if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
@@ -71,6 +72,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["order_number"])) {
             
             $message = '<div class="success-message">Thank you for your feedback!</div>';
         }
+    }
+}
+
+// Handle feedback deletion
+if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
+    $deleteIndex = $_GET['delete'];
+    
+    // Load existing feedback
+    $feedbacks = json_decode(file_get_contents($feedbackFile), true);
+    
+    // Ensure the feedback exists
+    if (isset($feedbacks[$deleteIndex])) {
+        // Delete feedback
+        unset($feedbacks[$deleteIndex]);
+        
+        // Re-index array
+        $feedbacks = array_values($feedbacks);
+        
+        // Save updated feedback to file
+        file_put_contents($feedbackFile, json_encode($feedbacks, JSON_PRETTY_PRINT));
+        
+        $message = '<div class="success-message">Feedback deleted successfully!</div>';
+    } else {
+        $message = '<div class="error-message">Feedback not found.</div>';
     }
 }
 
@@ -160,7 +185,7 @@ $feedbacks = json_decode(file_get_contents($feedbackFile), true);
         <h3>Recent Feedback</h3>
         <div class="feedback-display">
             <?php if (!empty($feedbacks)): ?>
-                <?php foreach ($feedbacks as $feedback): ?>
+                <?php foreach ($feedbacks as $index => $feedback): ?>
                     <div class="feedback-card">
                         <div class="feedback-header">
                             <strong>Order #<?= htmlspecialchars($feedback['order_number']) ?></strong>
@@ -170,6 +195,12 @@ $feedbacks = json_decode(file_get_contents($feedbackFile), true);
                         <?php if (!empty($feedback['image_path'])): ?>
                             <img src="<?= htmlspecialchars($feedback['image_path']) ?>" alt="Feedback Image" class="feedback-image">
                         <?php endif; ?>
+                        
+                        <!-- Delete Button -->
+                        <form action="contact.php" method="GET" onsubmit="return confirm('Are you sure you want to delete this feedback?');">
+                            <input type="hidden" name="delete" value="<?= $index ?>">
+                            <button type="submit" class="delete-btn">Delete Feedback</button>
+                        </form>
                     </div>
                 <?php endforeach; ?>
             <?php else: ?>

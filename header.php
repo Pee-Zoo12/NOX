@@ -1,4 +1,7 @@
 <!-- includes/header.php -->
+<?php 
+session_start(); // Start session at the VERY TOP
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,8 +27,21 @@
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="collection.php">Collections</a></li>
-            <li><a href="contact">Contact</a></li>
-            <li><a href="signup" class="btn">Sign In</a></li>
+            <li><a href="contact.php">Contact</a></li>
+
+            <?php if (isset($_SESSION['username'])): ?>
+                <!-- If logged in, show user icon + username -->
+                <li>
+                    <a href="#" class="user-info">
+                        <i class="fas fa-user"></i> 
+                        <?php echo htmlspecialchars($_SESSION['username']); ?>
+                    </a>
+                </li>
+            <?php else: ?>
+                <!-- If not logged in, show Sign In button -->
+                <li><a href="signup.php" class="btn">Sign In</a></li>
+            <?php endif; ?>
+
         </ul>
     </nav>
 </header>

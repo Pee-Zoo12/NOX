@@ -1,15 +1,15 @@
 /* Global Styles */
 :root {
-  --dark-green: #1a3a2a;
-  --medium-green: #2a5a3a;
+  --dark-green: #0e2b0c;
+  --medium-green: #04461a;
   --light-green: #3a7a4a;
-  --accent-green: #4c8c60;
-  --white: #ffffff;
-  --light-gray: #f7f7f7;
+  --accent-green: #267a41;
+  --white: #ffffff;  /* Change back to white */
+  --light-gray: #f5f5f5;  /* Light background */
   --medium-gray: #e0e0e0;
-  --dark-gray: #555555;
-  --black: #222222;
-  --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --dark-gray: #333333;
+  --black: #000000;  /* Change back to black */
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   --transition-fast: 0.3s ease;
   --transition-medium: 0.5s ease;
   --transition-slow: 0.8s ease;
@@ -24,7 +24,7 @@
 
 body {
   background-color: var(--white);
-  color: var(--black);
+  color: var(--black);  /* Change back to dark text */
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
@@ -172,6 +172,7 @@ img {
   align-items: center;
   padding: 20px 5%;
   background-color: var(--white);
+  color: var(--black);
   box-shadow: var(--shadow);
   position: sticky;
   top: 0;
@@ -181,7 +182,7 @@ img {
 
 .navbar.scrolled {
   padding: 10px 5%;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(26, 26, 26, 0.95);
 }
 
 .logo {
@@ -380,7 +381,8 @@ nav ul li a:hover {
 
 /* Collection Items */
 .collection-item {
-  background-color: var(--white);
+  background-color: var(--light-gray);
+  color: var(--black);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -461,7 +463,8 @@ nav ul li a:hover {
 .cart-item {
   display: flex;
   margin-bottom: 30px;
-  background-color: var(--white);
+  background-color: var(--light-gray);
+  color: var(--black);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -513,10 +516,11 @@ nav ul li a:hover {
 
 .form-control {
   width: 100%;
-  padding: 8px 12px;
-  border: 1px solid var(--medium-gray);
+  background-color: var(--medium-gray);
+  border: 1px solid var(--dark-gray);
   border-radius: 4px;
   font-size: 0.9rem;
+  color: var(--black);
   transition: border-color var(--transition-fast);
 }
 
@@ -610,7 +614,8 @@ nav ul li a:hover {
 }
 
 .checkout-form {
-  background-color: var(--white);
+  background-color: var(--light-gray);
+  color: var(--black);
   border-radius: 8px;
   padding: 30px;
   box-shadow: var(--shadow);
@@ -778,7 +783,8 @@ nav ul li a:hover {
 }
 
 .feedback-form {
-  background-color: var(--white);
+  background-color: var(--light-gray);
+  color: var(--black);
   padding: 30px;
   border-radius: 8px;
   box-shadow: var(--shadow);
@@ -790,7 +796,8 @@ nav ul li a:hover {
 }
 
 .feedback-card {
-  background-color: var(--white);
+  background-color: var(--light-gray);
+  color: var(--black);
   padding: 20px;
   border-radius: 8px;
   box-shadow: var(--shadow);
@@ -875,6 +882,79 @@ nav ul li a:hover {
   border-radius: 4px;
   font-size: 1rem;
 }
+
+
+/* Signup Page Styles */
+.signup-page {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.signup-page .container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.page-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.form-section {
+  margin-bottom: 50px;
+}
+
+.form-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #444;
+  border-left: 5px solid #9C27B0; /* Accent Color */
+  padding-left: 15px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 1px solid #464545;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #091b01;
+  outline: solid 2px;
+}
+
+textarea {
+  resize: vertical;
+}
+
 
 /* Footer */
 .footer {

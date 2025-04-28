@@ -47,6 +47,17 @@
                     <h3>New Arrivals</h3>
                 </div>
             </div>
+            <div class="collection-item">
+                <div class="product-image">
+                    <img src="img/15.png" alt="Accessories Collection">
+                    <div class="quick-view">
+                        <a href="collection.php?category=accessories" class="quick-btn">View Collection</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Accessories</h3>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -58,16 +69,16 @@
         <div class="collection-grid trending-grid">
             <div class="collection-item trending-item">
                 <div class="product-image">
-                    <img src="aimg/29.png" alt="Jacket">
+                    <img src="img/24.png" alt="Jacket">
                     <div class="quick-view">
-                        <a href="product.php?id=jacket" class="quick-btn">Quick View</a>
+                        <a href="product-details.php?id=jacket" class="quick-btn">Quick View</a>
                     </div>
                 </div>
                 <div class="product-info">
                     <h3>Stylish Jacket</h3>
-                    <div class="price">$129.99</div>
+                    <div class="price">₱ 800</div>
                     <div class="product-actions">
-                        <a href="product.php?id=jacket" class="btn view-details-btn">View Details</a>
+                        <a href="product-details.php?id=jacket" class="btn view-details-btn">View Details</a>
                     </div>
                 </div>
             </div>
@@ -75,14 +86,14 @@
                 <div class="product-image">
                     <img src="img/19.png" alt="Sneakers">
                     <div class="quick-view">
-                        <a href="product.php?id=sneakers" class="quick-btn">Quick View</a>
+                        <a href="product-details.php?id=sneakers" class="quick-btn">Quick View</a>
                     </div>
                 </div>
                 <div class="product-info">
                     <h3>Casual Sneakers</h3>
-                    <div class="price">$89.99</div>
+                    <div class="price">₱ 1,000</div>
                     <div class="product-actions">
-                        <a href="product.php?id=sneakers" class="btn view-details-btn">View Details</a>
+                        <a href="product-details.php?id=sneakers" class="btn view-details-btn">View Details</a>
                     </div>
                 </div>
             </div>
@@ -90,14 +101,29 @@
                 <div class="product-image">
                     <img src="img/30.png" alt="Bag">
                     <div class="quick-view">
-                        <a href="product.php?id=bag" class="quick-btn">Quick View</a>
+                        <a href="product-details.php?id=bag" class="quick-btn">Quick View</a>
                     </div>
                 </div>
                 <div class="product-info">
                     <h3>Leather Bag</h3>
-                    <div class="price">$149.99</div>
+                    <div class="price">₱ 500</div>
                     <div class="product-actions">
-                        <a href="product.php?id=bag" class="btn view-details-btn">View Details</a>
+                        <a href="product-details.php?id=bag" class="btn view-details-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-item trending-item">
+                <div class="product-image">
+                    <img src="img/8.png" alt="Top">
+                    <div class="quick-view">
+                        <a href="product-details.php?id=top" class="quick-btn">Quick View</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Stylish Top</h3>
+                    <div class="price">₱ 1,500</div>
+                    <div class="product-actions">
+                        <a href="product-details.php?id=top" class="btn view-details-btn">View Details</a>
                     </div>
                 </div>
             </div>
@@ -128,10 +154,19 @@
     <div class="container">
         <h2>Stay Updated</h2>
         <p>Sign up for our newsletter to get the latest updates and exclusive discounts.</p>
-        <form class="newsletter-form">
-            <input type="email" placeholder="Enter your email" required>
+        <form class="newsletter-form" action="signup.php" method="POST">
+            <input type="email" name="email" placeholder="Enter your email" required>
             <button type="submit" class="btn">Subscribe</button>
         </form>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or concerns, feel free to reach out to us!</p>
+        <a href="contact.php" class="btn">Contact Page</a>
     </div>
 </section>
 

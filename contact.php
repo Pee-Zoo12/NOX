@@ -124,7 +124,6 @@ $feedbacks = json_decode(file_get_contents($feedbackFile), true);
                 <li><a href="index.php">Home</a></li>
                 <li><a href="collection.php">Collections</a></li>
                 <li><a href="contact.php" class="active">Contact</a></li>
-                <li><a href="#signup" class="btn">Sign In</a></li>
                 </li>
             </ul>
         </nav>
@@ -209,6 +208,42 @@ $feedbacks = json_decode(file_get_contents($feedbackFile), true);
         </div>
     </section>
 
+<!-- Authorized Resellers Section -->
+<section class="resellers-section">
+    <h2>Official & Authentic Resellers</h2>
+    <p class="reseller-description">You can shop authentic Nox Apparel products from these trusted e-commerce platforms:</p>
+
+    <div class="reseller-cards">
+        <div class="reseller-card">
+            <i class="fas fa-store"></i>
+            <h3>Shopee Philippines</h3>
+            <p>Shop directly from our official Shopee store with verified reviews and fast shipping.</p>
+            <a href="https://shopee.ph/noxapparel.official" target="_blank" class="reseller-link">Visit Store</a>
+        </div>
+
+        <div class="reseller-card">
+            <i class="fas fa-shopping-bag"></i>
+            <h3>Lazada Philippines</h3>
+            <p>Enjoy exclusive deals and bundles through our LazMall flagship store.</p>
+            <a href="https://www.lazada.com.ph/shop/noxapparel" target="_blank" class="reseller-link">Visit Store</a>
+        </div>
+
+        <div class="reseller-card">
+            <i class="fas fa-globe"></i>
+            <h3>Website Direct</h3>
+            <p>Order directly via our website with exclusive access to new drops and limited editions.</p>
+            <a href="collection.php" class="reseller-link">Shop Now</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -220,7 +255,7 @@ $feedbacks = json_decode(file_get_contents($feedbackFile), true);
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="shop.php">Shop</a></li>
+                    
                     <li><a href="collection.php">Collections</a></li>
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
@@ -228,8 +263,9 @@ $feedbacks = json_decode(file_get_contents($feedbackFile), true);
             <div class="footer-section">
                 <h3>Connect With Us</h3>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/12EJr7p8YTM/?mibextid=wwXIfr
+"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/_nox.apparel?igsh=MTJ6ZmJxZ29ybWIwbg=="><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>

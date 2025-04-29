@@ -4,6 +4,28 @@
     <div class="container">
         <h1 class="page-title">Join NOX Apparel</h1>
 
+        <!-- Display reseller application success message if it exists -->
+        <?php if (isset($_SESSION['reseller_success'])): ?>
+            <div class="success-message">
+                <?php 
+                    echo $_SESSION['reseller_success']; 
+                    // Clear the message so it doesn't show again on refresh
+                    unset($_SESSION['reseller_success']);
+                ?>
+            </div>
+        <?php endif; ?>
+
+        <!-- Display reseller application error message if it exists -->
+        <?php if (isset($_SESSION['reseller_error'])): ?>
+            <div class="error-message">
+                <?php 
+                    echo $_SESSION['reseller_error']; 
+                    // Clear the message so it doesn't show again on refresh
+                    unset($_SESSION['reseller_error']);
+                ?>
+            </div>
+        <?php endif; ?>
+
         <!-- User Signup Form -->
         <div class="form-section">
             <h2>Create an Account</h2>

@@ -154,7 +154,6 @@ $activeCategory = isset($_GET['category']) ? $_GET['category'] : '';
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="shop.php">Shop</a></li>
                     <li><a href="collection.php">Collections</a></li>
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
@@ -162,8 +161,9 @@ $activeCategory = isset($_GET['category']) ? $_GET['category'] : '';
             <div class="footer-section">
                 <h3>Connect With Us</h3>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/12EJr7p8YTM/?mibextid=wwXIfr
+"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/_nox.apparel?igsh=MTJ6ZmJxZ29ybWIwbg=="><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>

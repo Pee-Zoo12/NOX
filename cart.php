@@ -90,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <div class="empty-cart">
             <i class="fas fa-shopping-cart fa-4x"></i>
             <p>Your cart is empty.</p>
-            <a href="shop.php" class="btn">Continue Shopping</a>
+            <a href="collection.php" class="btn">Continue Shopping</a>
         </div>
     <?php else: ?>
         <?php foreach ($cart as $index => $item): 

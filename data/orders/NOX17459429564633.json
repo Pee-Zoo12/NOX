@@ -1,0 +1,27 @@
+{
+    "order_id": "NOX17459429564633",
+    "order_date": "2025-04-29 18:09:16",
+    "customer": {
+        "fullname": "Pj",
+        "email": "pearlyjaleco19@gmail.com",
+        "phone": "0915667895",
+        "address": "Somewhere down the road",
+        "city": "PASSI CITY, ILOILO",
+        "postal_code": "5037",
+        "country": "Philippines"
+    },
+    "items": [
+        {
+            "name": "Casual Flats",
+            "price": 1199,
+            "image": "img\/27.png",
+            "size": "M",
+            "color": "black",
+            "quantity": 2,
+            "product_id": "77ce127ac8500b0627573f6505deeb61"
+        }
+    ],
+    "total": 2398,
+    "payment_method": "Cash on Delivery",
+    "status": "Processing"
+}

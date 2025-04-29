@@ -67,76 +67,84 @@
     <div class="container">
         <h2>Trending Now</h2>
         <div class="collection-grid trending-grid">
+
+            <!-- Product 1 -->
             <div class="collection-item trending-item">
                 <div class="product-image">
-                    <img src="img/24.png" alt="Jacket">
+                    <img src="img/24.png" alt="Stylish Jacket">
                     <div class="quick-view">
-                        <a href="product-details.php?id=jacket" class="quick-btn">Quick View</a>
+                        <a href="product-details.php?name=Stylish+Jacket&price=800&image=img/24.png&serial=SN-JKT001" class="quick-btn">Quick View</a>
                     </div>
                 </div>
                 <div class="product-info">
                     <h3>Stylish Jacket</h3>
                     <div class="price">₱ 800</div>
                     <div class="product-actions">
-                        <a href="product-details.php?id=jacket" class="btn view-details-btn">View Details</a>
+                        <a href="product-details.php?name=Stylish+Jacket&price=800&image=img/24.png&serial=SN-JKT001" class="btn view-details-btn">View Details</a>
                     </div>
                 </div>
             </div>
+
+            <!-- Product 2 -->
             <div class="collection-item trending-item">
                 <div class="product-image">
-                    <img src="img/19.png" alt="Sneakers">
+                    <img src="img/19.png" alt="Casual Sneakers">
                     <div class="quick-view">
-                        <a href="product-details.php?id=sneakers" class="quick-btn">Quick View</a>
+                        <a href="product-details.php?name=Casual+Sneakers&price=1000&image=img/19.png&serial=SN-SNK002" class="quick-btn">Quick View</a>
                     </div>
                 </div>
                 <div class="product-info">
                     <h3>Casual Sneakers</h3>
                     <div class="price">₱ 1,000</div>
                     <div class="product-actions">
-                        <a href="product-details.php?id=sneakers" class="btn view-details-btn">View Details</a>
+                        <a href="product-details.php?name=Casual+Sneakers&price=1000&image=img/19.png&serial=SN-SNK002" class="btn view-details-btn">View Details</a>
                     </div>
                 </div>
             </div>
+
+            <!-- Product 3 -->
             <div class="collection-item trending-item">
                 <div class="product-image">
-                    <img src="img/30.png" alt="Bag">
+                    <img src="img/30.png" alt="Leather Bag">
                     <div class="quick-view">
-                        <a href="product-details.php?id=bag" class="quick-btn">Quick View</a>
+                        <a href="product-details.php?name=Leather+Bag&price=500&image=img/30.png&serial=SN-BAG003" class="quick-btn">Quick View</a>
                     </div>
                 </div>
                 <div class="product-info">
                     <h3>Leather Bag</h3>
                     <div class="price">₱ 500</div>
                     <div class="product-actions">
-                        <a href="product-details.php?id=bag" class="btn view-details-btn">View Details</a>
+                        <a href="product-details.php?name=Leather+Bag&price=500&image=img/30.png&serial=SN-BAG003" class="btn view-details-btn">View Details</a>
                     </div>
                 </div>
             </div>
+
+            <!-- Product 4 -->
             <div class="collection-item trending-item">
                 <div class="product-image">
-                    <img src="img/8.png" alt="Top">
+                    <img src="img/8.png" alt="Stylish Top">
                     <div class="quick-view">
-                        <a href="product-details.php?id=top" class="quick-btn">Quick View</a>
+                        <a href="product-details.php?name=Stylish+Top&price=1500&image=img/8.png&serial=SN-TOP004" class="quick-btn">Quick View</a>
                     </div>
                 </div>
                 <div class="product-info">
                     <h3>Stylish Top</h3>
                     <div class="price">₱ 1,500</div>
                     <div class="product-actions">
-                        <a href="product-details.php?id=top" class="btn view-details-btn">View Details</a>
+                        <a href="product-details.php?name=Stylish+Top&price=1500&image=img/8.png&serial=SN-TOP004" class="btn view-details-btn">View Details</a>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
-
 <!-- Offers -->
 <section class="offers">
     <div class="container">
         <h2>Limited-Time Offers</h2>
         <p>Exclusive discounts available for a limited period. Don't miss out!</p>
-        <a href="shop.php" class="btn">Shop Deals</a>
+        <a href="collection.php" class="btn">Shop Deals</a>
     </div>
 </section>
 

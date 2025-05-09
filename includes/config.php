@@ -2,8 +2,8 @@
 // Configuration settings for the e-commerce application
 
 // Site information
-define('SITE_NAME', 'ShopEasy');
-define('SITE_URL', 'http://localhost/shop-easy');
+define('SITE_NAME', 'NOX');
+define('SITE_URL', 'http://localhost/NOX');
 
 // JSON data file paths
 define('DATA_DIR', __DIR__ . '/../data/');
@@ -12,9 +12,6 @@ define('PRODUCTS_FILE', DATA_DIR . 'products.json');
 define('ORDERS_FILE', DATA_DIR . 'orders.json');
 define('CART_FILE', DATA_DIR . 'cart.json');
 define('INVENTORY_FILE', DATA_DIR . 'inventory.json');
-
-// Session configuration
-session_start();
 
 // Error reporting
 ini_set('display_errors', 1);
